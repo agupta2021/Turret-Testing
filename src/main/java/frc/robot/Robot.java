@@ -40,10 +40,10 @@ public class Robot extends TimedRobot {
     public static double kP;
     public static double seekingCurrent;
     public static double angleAdjust;
-    // public WL_Encoder turretEncoder;
+     public WL_Encoder turretEncoder;
     public TalonSRXEncoderWrapper turretEncoderWrapper;
-    public int encPort1;
-    public int encPort2;
+    public int encPort1 = 3;
+    public int encPort2 = 4;
     public double gearRatio;
     public double wheelRadius;
     public double pulsesPerRotation;
@@ -80,10 +80,9 @@ public class Robot extends TimedRobot {
         wheelRadius = 1;
         pulsesPerRotation = 4096; // all of these must be changed
 
-        // turretEncoder = new WL_Encoder(encPort1, encPort2);
+         turretEncoder = new WL_Encoder(encPort1, encPort2);
 
-        // turretEncoder.setDistancePerPulse(gearRatio * (wheelRadius * 2 * Math.PI) /
-        // pulsesPerRotation); //MUST sset up encoder correctly
+        turretEncoder.setDistancePerPulse(3 * Math.PI / 4096);
 
         // turretEncoderWrapper = new TalonSRXEncoderWrapper(turretTalon);
 
@@ -168,7 +167,7 @@ public class Robot extends TimedRobot {
 
 
     turretTalon.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
-    turretTalon.getSensorCollection().setPulseWidthPosition(0, 50);
+    //turretTalon.getSensorCollection().setPulseWidthPosition(0, 50);
         // make sure turret is placed all the way to the left before enabling... "home
         // it"
         sweepLeft = false;
@@ -189,14 +188,15 @@ public class Robot extends TimedRobot {
         //System.out.println("angle adjust:" + angleAdjust);
 
 
-        double position = Math.PI * (turretTalon.getSelectedSensorPosition()/2048.0);
+        //double position = Math.PI * (turretTalon.getSelectedSensorPosition()/2048.0);
+        double position = turretEncoder.getDistance(); //change
 
         SmartDashboard.putNumber("Sensor Pos Rad", position);
 
         SmartDashboard.putNumber("Sensor Pos Deg", Math.toDegrees(position));
 
         // System.out.println("WrapperPos" + turretEncoderWrapper.getPosition());
-        if (tv && stick.getYButton()) { //vision align ... take Y button out
+        if (tv && stick.getYButton()) { //vision align ... take Y button out for auto align
             // System.out.println("yeeeeeet");
             angleAdjust = tx * kP; //check for += vs =
             turretTalon.set(ControlMode.PercentOutput, angleAdjust);
@@ -226,14 +226,14 @@ public class Robot extends TimedRobot {
             else if (stick.getAButton()){ //seek
 
 
-              if(sweepRight && position > Math.toRadians(300)){
+              if(sweepRight && position > Math.toRadians(350)){
                 //GetPos() or getQuadraturePos() ???
                 sweepLeft = true;
                 sweepRight = false;
                 seekingCurrent = -0.5;
               }
 
-              if(sweepLeft && position < Math.toRadians(15)){
+              if(sweepLeft && position < Math.toRadians(10)){
                 sweepRight = true;
                 sweepLeft = false;
                 seekingCurrent = 0.5;

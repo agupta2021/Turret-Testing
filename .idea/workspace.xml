@@ -6,45 +6,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarlordsLib" beforeDir="false" afterPath="$PROJECT_DIR$/WarlordsLib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/frc/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/frc/robot/Robot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/robot/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libcscore.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libcscorejni.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libntcore.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libntcorejni.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_calib3d.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_core.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_features2d.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_flann.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_highgui.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_imgcodecs.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_imgproc.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_java347.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_ml.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_objdetect.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_photo.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_shape.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_stitching.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_superres.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_video.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_videoio.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libopencv_videostab.3.4.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libwpiHal.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libwpiHaljni.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libwpiutil.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/libwpiutiljni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Turret-Testing.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Turret-Testing.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendordeps/Phoenix.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendordeps/Phoenix.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +80,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LocalizationTesting" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
@@ -251,7 +220,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
