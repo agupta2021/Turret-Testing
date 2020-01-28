@@ -10,9 +10,15 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.ConditionalCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.OdometryVisionAlign;
+import frc.robot.commands.VisionAlign;
+import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Turret;
+import frc.team2485.WarlordsLib.oi.WL_XboxController;
 
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -27,11 +33,19 @@ public class RobotContainer {
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
+  private Turret turret;
+  private Drivetrain drivetrain;
+  private WL_XboxController xbox;
+
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
    */
   public RobotContainer() {
+
+    turret = new Turret();
+    drivetrain = new Drivetrain();
+    xbox = new WL_XboxController(0);
 
 //    SmartDashboard.putData(m_exampleSubsystem);
 
@@ -46,6 +60,9 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    xbox.getJoystickButton(XboxController.Button.kA)
+            .whenPressed(new ConditionalCommand(new VisionAlign(turret), new OdometryVisionAlign(drivetrain, turret), turret.getLimelight()::hasValidTarget));
+    //check that default interruptible is true
   }
 
 
@@ -58,4 +75,6 @@ public class RobotContainer {
     // An ExampleCommand will run in autonomous
     return m_autoCommand;
   }
+
+
 }

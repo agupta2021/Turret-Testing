@@ -40,7 +40,7 @@ public class Robot extends TimedRobot {
     public static double kP;
     public static double seekingCurrent;
     public static double angleAdjust;
-     public WL_Encoder turretEncoder;
+    public WL_Encoder turretEncoder;
     public TalonSRXEncoderWrapper turretEncoderWrapper;
     public int encPort1 = 3;
     public int encPort2 = 4;
@@ -50,6 +50,13 @@ public class Robot extends TimedRobot {
     public boolean sweepLeft;
     public boolean sweepRight;
     public double steerCommand;
+    public TalonSRX m_talonThing;
+    public TalonSRXEncoderWrapper turretEncoderThing;
+
+
+
+    public static double lastAlignedHeading;
+    public static double lastTyVal;
 
     /**
      * This function is run when the robot is first started up and should be used
@@ -59,12 +66,21 @@ public class Robot extends TimedRobot {
     public void robotInit() {
 
         RobotConfigs.getInstance().saveConfigsToFile(FILE_PATH);
-
+        //ignore most of this stuff
         m_robotContainer = new RobotContainer();
 
         limelight = new Limelight(2);
 
         turretTalon = new TalonSRX(1); // subject to change
+
+        turretTalon.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
+
+        turretEncoderThing = new TalonSRXEncoderWrapper(turretTalon);
+
+
+
+        turretEncoderThing.setDistancePerRevolution(3 * Math.PI / 4096);
+
 
 
         stick = new WL_XboxController(0);
@@ -72,6 +88,8 @@ public class Robot extends TimedRobot {
         kP = 0.03; // change for tuning
 
         angleAdjust = 0;
+        lastAlignedHeading = 0;
+        lastTyVal = 0;
 
         // encPort1 = 0; //change
         // encPort2 = 1; //change
@@ -80,7 +98,7 @@ public class Robot extends TimedRobot {
         wheelRadius = 1;
         pulsesPerRotation = 4096; // all of these must be changed
 
-         turretEncoder = new WL_Encoder(encPort1, encPort2);
+        turretEncoder = new WL_Encoder(encPort1, encPort2);
 
         turretEncoder.setDistancePerPulse(3 * Math.PI / 4096);
 
@@ -110,6 +128,8 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         CommandScheduler.getInstance().run();
+
+        System.out.println("Turret Encoder Val" + turretEncoderThing.getPosition());
     }
 
     /**
@@ -161,18 +181,19 @@ public class Robot extends TimedRobot {
         }
         // turretEncoder.reset();
 
-        steerCommand = 0;
+       // steerCommand = 0;
+
         //r.init();
 
 
 
-    turretTalon.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
+    //turretTalon.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
     //turretTalon.getSensorCollection().setPulseWidthPosition(0, 50);
         // make sure turret is placed all the way to the left before enabling... "home
         // it"
-        sweepLeft = false;
-        sweepRight = true;
-        seekingCurrent = 0.5;
+//        sweepLeft = false;
+//        sweepRight = true;
+//        seekingCurrent = 0.5;
     }
 
     /**
@@ -181,74 +202,12 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
       //r.run();
-        tv = limelight.hasValidTarget(); // look I used the wrapper
-        tx = limelight.getTargetHorizontalOffset(0);
-        // System.out.println("tv:" + tv);
-        //  System.out.println("tx:" + tx);
-        //System.out.println("angle adjust:" + angleAdjust);
 
 
-        //double position = Math.PI * (turretTalon.getSelectedSensorPosition()/2048.0);
-        double position = turretEncoder.getDistance(); //change
-
-        SmartDashboard.putNumber("Sensor Pos Rad", position);
-
-        SmartDashboard.putNumber("Sensor Pos Deg", Math.toDegrees(position));
-
-        // System.out.println("WrapperPos" + turretEncoderWrapper.getPosition());
-        if (tv && stick.getYButton()) { //vision align ... take Y button out for auto align
-            // System.out.println("yeeeeeet");
-            angleAdjust = tx * kP; //check for += vs =
-            turretTalon.set(ControlMode.PercentOutput, angleAdjust);
-        } else { //seek and sweep across or manual
-
-            if (stick.getXButton()) { // manual control
-
-                steerCommand = stick.getX(GenericHID.Hand.kLeft) * stick.getX(GenericHID.Hand.kLeft);
-
-                if (stick.getX(GenericHID.Hand.kLeft) < 0) {
-                    steerCommand *= -1;
-                }
-
-                if (steerCommand > 0.5) {
-                    steerCommand = 0.5;
-                }
-                if (steerCommand < -0.5) {
-                    steerCommand = -0.5;
-                }
-
-                turretTalon.set(ControlMode.PercentOutput, steerCommand);
 
 
-                //System.out.println("current:" + turretTalon.getStatorCurrent());
-
-            }
-            else if (stick.getAButton()){ //seek
 
 
-              if(sweepRight && position > Math.toRadians(350)){
-                //GetPos() or getQuadraturePos() ???
-                sweepLeft = true;
-                sweepRight = false;
-                seekingCurrent = -0.5;
-              }
-
-              if(sweepLeft && position < Math.toRadians(10)){
-                sweepRight = true;
-                sweepLeft = false;
-                seekingCurrent = 0.5;
-              }
-
-
-              turretTalon.set(ControlMode.PercentOutput, seekingCurrent);
-
-            }
-            else {
-                turretTalon.set(ControlMode.PercentOutput, 0);
-            }
-
-
-        }
 
     }
 

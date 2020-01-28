@@ -2,18 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11af55b4-dfee-45aa-9e19-99938cac184a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WarlordsLib/src/main/java/frc/team2485/WarlordsLib/sensors/EncoderWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WarlordsLib/src/main/java/frc/team2485/WarlordsLib/sensors/SparkMaxAlternateEncoderWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/commands/OdometryVisionAlign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/commands/VisionAlign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/subsystems/Drivetrain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/subsystems/Turret.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team2485/robot/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/frc/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/frc/robot/Robot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WarlordsLib" beforeDir="false" afterPath="$PROJECT_DIR$/WarlordsLib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/robot/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Turret-Testing.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Turret-Testing.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/robot/RobotContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/robot/RobotContainer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,24 +50,23 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Turret-Testing" type="f1a62948:ProjectNode" />
+                <item name="Turret Logic" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Turret-Testing" type="f1a62948:ProjectNode" />
+                <item name="Turret Logic" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Turret-Testing" type="f1a62948:ProjectNode" />
+                <item name="Turret Logic" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="embeddedtools" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Turret-Testing" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="gradlerio" type="c8890929:TasksNode$1" />
+                <item name="Turret Logic" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -63,15 +75,13 @@
       </state>
     </system>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>&quot;</find>
-      <find>“</find>
-      <find>”</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&quot;</replace>
-    </replaceStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +90,9 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LocalizationTesting" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/frc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
@@ -96,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Turret-Testing [deploy]">
+  <component name="RunManager" selected="Gradle.robot-template [build]">
     <configuration name="Turret-Testing [deploy]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
